@@ -3,3 +3,8 @@ authors = ["shinoda4"]
 language = "en"
 src = "src"
 title = "Inventory Distributed System Design"
+
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
