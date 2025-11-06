@@ -428,7 +428,6 @@ Delete the currently logged in user.
 
 `delete`
 
-
 ### Request body
 
 #### Required
@@ -615,6 +614,207 @@ Success to reset username.
         // "A user with that username already exists."
     // ],
     "re_new_username": [
+        "This field is required."
+    ]
+}
+```
+
+## Set Password
+
+### URL
+
+`{{baseURL}}/api/auth/users/set_password/`
+
+### Method
+
+`post`
+
+### Request body
+
+#### Required
+
+*new_password*: `string`
+
+*re_new_password*: `string`
+
+*current_password*: `string`
+
+#### Json body
+
+```json
+{
+    "new_password": "newpasswd123",
+    "re_new_password": "newpasswd123",
+    "current_password": "passwd123"
+}
+```
+
+### Response
+
+**code**: `HTTP_204_NO_CONTENT`
+
+Success to set new password.
+
+**code**: `HTTP_400_BAD_REQUEST`
+
+non_field_errors
+
+```json
+{
+    "new_password": [
+        "This field is required."
+    ],
+    "re_new_password": [
+        "This field is required."
+    ],
+    "current_password": [
+        "This field is required."
+    ]
+}
+```
+
+## Reset Password
+
+Use this endpoint to send email to user with password reset link. You have to setup `PASSWORD_RESET_CONFIRM_URL`.
+
+### URL
+
+`api/auth/users/reset_password/`
+
+### Method
+
+`post`
+
+### Request body
+
+#### Required
+
+*email*: `string`
+
+#### Json body
+
+```json
+{
+    "email": "hello@world.com"
+}
+```
+
+### Response
+
+**code**: `HTTP_204_NO_CONTENT`
+
+Success to send reset password email.
+
+**code**: `HTTP_400_BAD_REQUEST`
+
+**body**:
+
+```json
+{
+    "email": [
+        "Enter a valid email address."
+    ]
+}
+```
+
+<!-- Reset Password Confirmation¶
+Use this endpoint to finish reset password process. This endpoint is not a URL which will be directly exposed to your users - you should provide site in your frontend application (configured by PASSWORD_RESET_CONFIRM_URL) which will send POST request to reset password confirmation endpoint. HTTP_400_BAD_REQUEST will be raised if the user has logged in or changed password since the token creation.
+
+Default URL: /users/reset_password_confirm/
+
+Note
+
+re_new_password is only required if PASSWORD_RESET_CONFIRM_RETYPE is True
+
+Method
+
+Request
+
+Response
+
+POST
+
+uid
+
+token
+
+new_password
+
+re_new_password
+
+HTTP_204_NO_CONTENT
+
+HTTP_400_BAD_REQUEST
+
+uid
+
+token
+
+new_password
+
+re_new_password -->
+
+## Reset Password Confirmation
+
+Assuming that user has received the reset password email, he can use the `uid` and `token` in the email to reset his password.
+
+`<a href="http://127.0.0.1:8000/auth/password-reset/OA/cyu52z-f838db4a34f5a9a5fd5008191381405c">`
+
+So refer to this `password-reset/{uid}/{token}`, the `uid` is `OA`, and `token` is `cyu52z-f838db4a34f5a9a5fd5008191381405c`.
+
+### URL
+
+`api/auth/users/reset_password_confirm/`
+
+### Method
+
+`post`
+
+### Request body
+
+#### Required
+
+*uid*: `string`
+
+*token*: `string`
+
+*new_password*: `string`
+
+*re_new_password*: `string`
+
+#### Json body
+
+```json
+{
+    "uid": "OA",
+    "token": "cyu52z-f838db4a34f5a9a5fd5008191381405c",
+    "new_password": "newpasswd123",
+    "re_new_password": "newpasswd123"
+}
+```
+
+### Response
+
+**code**: `HTTP_204_NO_CONTENT`
+
+Success to reset password.
+
+**code**: `HTTP_400_BAD_REQUEST`
+
+**body**:
+
+```json
+{
+    "uid": [
+        "Invalid user id or user doesn't exist."
+    ],
+    "token": [
+        "Invalid token for given user."
+    ],
+    "new_password": [
+        "This field is required."
+    ],
+    "re_new_password": [
         "This field is required."
     ]
 }
