@@ -18,15 +18,15 @@ After user created successfully, `joser` will send an email that includes activa
 
 #### Required
 
-*username*: `string`
+_username_: `string`
 
-*password*: `string`
+_password_: `string`
 
-*re_password*: `string`
+_re_password_: `string`
 
-*email*: `string`
+_email_: `string`
 
-*phone_number*: `string`
+_phone_number_: `string`
 
 <!-- #### Optional -->
 
@@ -34,11 +34,11 @@ After user created successfully, `joser` will send an email that includes activa
 
 ```json
 {
-    "username": "mike",
-    "password": "passwd123",
-    "re_password": "passwd123",
-    "email": "hello@world.com",
-    "phone_number": "1234567890"
+  "username": "mike",
+  "password": "passwd123",
+  "re_password": "passwd123",
+  "email": "hello@world.com",
+  "phone_number": "1234567890"
 }
 ```
 
@@ -50,9 +50,9 @@ After user created successfully, `joser` will send an email that includes activa
 
 ```json
 {
-    "email": "hello@world.com",
-    "username": "mike",
-    "id": 1
+  "email": "hello@world.com",
+  "username": "mike",
+  "id": 1
 }
 ```
 
@@ -88,16 +88,16 @@ After created user, djoser will send an email which include `uid` and `token` to
 
 #### Required
 
-*uid*: `string`
+_uid_: `string`
 
-*token*: `string`
+_token_: `string`
 
 #### Json body
 
 ```json
 {
-    "uid": "Mzk",
-    "token": "cysm5f-ef12575f6699ca8694221dc97a3da11e"
+  "uid": "Mzk",
+  "token": "cysm5f-ef12575f6699ca8694221dc97a3da11e"
 }
 ```
 
@@ -113,12 +113,8 @@ Success to activate.
 
 ```json
 {
-    "uid": [
-        "Invalid user id or user doesn't exist."
-    ],
-    "token": [
-        "Invalid token for given user."
-    ]
+  "uid": ["Invalid user id or user doesn't exist."],
+  "token": ["Invalid token for given user."]
 }
 ```
 
@@ -130,7 +126,7 @@ Already activated.
 
 ```json
 {
-    "detail": "Stale token for given user."
+  "detail": "Stale token for given user."
 }
 ```
 
@@ -150,13 +146,13 @@ Use this endpoint to re-send the activation e-mail. Note that no e-mail would be
 
 #### Required
 
-*email*: `string`
+_email_: `string`
 
 #### Json body
 
 ```json
 {
-    "email": "hello@world.com"
+  "email": "hello@world.com"
 }
 ```
 
@@ -174,9 +170,7 @@ Success to resend activation email.
 
 ```json
 {
-    "email": [
-        "Enter a valid email address."
-    ]
+  "email": ["Enter a valid email address."]
 }
 ```
 
@@ -196,16 +190,16 @@ Authenticate user and return token.
 
 #### Required
 
-*username*: `string`
+_username_: `string`
 
-*password*: `string`
+_password_: `string`
 
 #### Json body
 
 ```json
 {
-    "username": "mike",
-    "password": "passwd123"
+  "username": "mike",
+  "password": "passwd123"
 }
 ```
 
@@ -217,8 +211,8 @@ Authenticate user and return token.
 
 ```json
 {
-    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2MjQzNDQ3NiwiaWF0IjoxNzYyMzQ4MDc2LCJqdGkiOiI2NjlkODdkNGFjZmQ0Zjg2ODc1MDM3NzFkMmE2ZjQ2ZCIsInVzZXJfaWQiOiI3Iiwicm9sZXMiOltdLCJwZXJtaXNzaW9ucyI6W10sInVzZXJuYW1lIjoibWlrZSJ9.M_M1-QReSTHux7T_iVvidCEMY8MyAbCZ_t-82W2uaUs",
-    "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzUxMDc2LCJpYXQiOjE3NjIzNDgwNzYsImp0aSI6IjY0NTZhYjAyNmZlMzQ5MWZiNWFiOGFhNmNkOTYzMDVjIiwidXNlcl9pZCI6IjciLCJyb2xlcyI6W10sInBlcm1pc3Npb25zIjpbXSwidXNlcm5hbWUiOiJtaWtlIn0.wVwm5N7Apm33n2NxBruXzeTFqjCzuplLMKmRPSJTk0w"
+  "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2MjQzNDQ3NiwiaWF0IjoxNzYyMzQ4MDc2LCJqdGkiOiI2NjlkODdkNGFjZmQ0Zjg2ODc1MDM3NzFkMmE2ZjQ2ZCIsInVzZXJfaWQiOiI3Iiwicm9sZXMiOltdLCJwZXJtaXNzaW9ucyI6W10sInVzZXJuYW1lIjoibWlrZSJ9.M_M1-QReSTHux7T_iVvidCEMY8MyAbCZ_t-82W2uaUs",
+  "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzUxMDc2LCJpYXQiOjE3NjIzNDgwNzYsImp0aSI6IjY0NTZhYjAyNmZlMzQ5MWZiNWFiOGFhNmNkOTYzMDVjIiwidXNlcl9pZCI6IjciLCJyb2xlcyI6W10sInBlcm1pc3Npb25zIjpbXSwidXNlcm5hbWUiOiJtaWtlIn0.wVwm5N7Apm33n2NxBruXzeTFqjCzuplLMKmRPSJTk0w"
 }
 ```
 
@@ -230,9 +224,7 @@ non_field_errors
 
 ```json
 {
-    "password": [
-        "This field is required."
-    ]
+  "password": ["This field is required."]
 }
 ```
 
@@ -252,13 +244,13 @@ Refresh access token.
 
 #### Required
 
-*refresh*: `string`
+_refresh_: `string`
 
 #### Json body
 
 ```json
 {
-    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2MjQzNjUwOCwiaWF0IjoxNzYyMzUwMTA4LCJqdGkiOiJhNmE3MDVlY2ZjNWE0ZWJkOWM3ODFlZGFmMGFjNWM0MCIsInVzZXJfaWQiOiI3In0.WTQ9QI_EpleiiaNAoAdwXAp2RF0URKFa_ahDaYQYNy0"
+  "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2MjQzNjUwOCwiaWF0IjoxNzYyMzUwMTA4LCJqdGkiOiJhNmE3MDVlY2ZjNWE0ZWJkOWM3ODFlZGFmMGFjNWM0MCIsInVzZXJfaWQiOiI3In0.WTQ9QI_EpleiiaNAoAdwXAp2RF0URKFa_ahDaYQYNy0"
 }
 ```
 
@@ -270,7 +262,7 @@ Refresh access token.
 
 ```json
 {
-    "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzUzMTMxLCJpYXQiOjE3NjIzNTAxMzEsImp0aSI6ImI3NmQ3MzY0MTQ3OTQ3Y2JiZTZlZjU5MTJmYjVmYzJjIiwidXNlcl9pZCI6IjcifQ.hgy3Zm7p3WETLdAoNX7smf7uAmZRMih_RFZNoe1j4Kg"
+  "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyMzUzMTMxLCJpYXQiOjE3NjIzNTAxMzEsImp0aSI6ImI3NmQ3MzY0MTQ3OTQ3Y2JiZTZlZjU5MTJmYjVmYzJjIiwidXNlcl9pZCI6IjcifQ.hgy3Zm7p3WETLdAoNX7smf7uAmZRMih_RFZNoe1j4Kg"
 }
 ```
 
@@ -282,9 +274,7 @@ non_field_errors
 
 ```json
 {
-    "refresh": [
-        "This field is required."
-    ]
+  "refresh": ["This field is required."]
 }
 ```
 
@@ -304,13 +294,13 @@ Verify access token.
 
 #### Required
 
-*token*: `string`
+_token_: `string`
 
 #### Json body
 
 ```json
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2MjI1MzE0NSwiaWF0IjoxNzYyMTY2NzQ1LCJqdGkiOiI1MjM1NGU2ZDkyMWU0NjNjYjgyNDRiMTNmMGRjZjAzMiIsInVzZXJfaWQiOiIxIn0.Ija21SaYGw99NEHFKtZFy5mSh0uMpUbuXoSNchm1-7I"
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2MjI1MzE0NSwiaWF0IjoxNzYyMTY2NzQ1LCJqdGkiOiI1MjM1NGU2ZDkyMWU0NjNjYjgyNDRiMTNmMGRjZjAzMiIsInVzZXJfaWQiOiIxIn0.Ija21SaYGw99NEHFKtZFy5mSh0uMpUbuXoSNchm1-7I"
 }
 ```
 
@@ -332,8 +322,8 @@ Token is expired.
 
 ```json
 {
-    "detail": "Token is expired",
-    "code": "token_not_valid"
+  "detail": "Token is expired",
+  "code": "token_not_valid"
 }
 ```
 
@@ -343,9 +333,7 @@ non_field_errors
 
 ```json
 {
-    "token": [
-        "This field is required."
-    ]
+  "token": ["This field is required."]
 }
 ```
 
@@ -369,9 +357,9 @@ Get the currently logged in user information.
 
 ```json
 {
-    "email": "hello@world.com",
-    "username": "mike",
-    "id": 1
+  "email": "hello@world.com",
+  "username": "mike",
+  "id": 1
 }
 ```
 
@@ -389,16 +377,16 @@ Note that if user changed his email by `put` or `patch`, the user will be set to
 
 ```json
 {
-    "id": 7,
-    "roles": [],
-    "last_login": null,
-    "username": "mike",
-    "first_name": "",
-    "last_name": "",
-    "is_active": true,
-    "date_joined": "2025-11-05T12:45:00.628205Z",
-    "phone_number": "1234567890",
-    "email": "hello@world.com"
+  "id": 7,
+  "roles": [],
+  "last_login": null,
+  "username": "mike",
+  "first_name": "",
+  "last_name": "",
+  "is_active": true,
+  "date_joined": "2025-11-05T12:45:00.628205Z",
+  "phone_number": "1234567890",
+  "email": "hello@world.com"
 }
 ```
 
@@ -410,9 +398,7 @@ non_field_errors
 
 ```json
 {
-    "email": [
-        "Enter a valid email address."
-    ]
+  "email": ["Enter a valid email address."]
 }
 ```
 
@@ -432,13 +418,13 @@ Delete the currently logged in user.
 
 #### Required
 
-*current_password*: `string`
+_current_password_: `string`
 
 #### Json body
 
 ```json
 {
-    "current_password": "passwd123"
+  "current_password": "passwd123"
 }
 ```
 
@@ -454,9 +440,7 @@ Success to delete user.
 
 ```json
 {
-    "current_password": [
-        "This field is required."
-    ]
+  "current_password": ["This field is required."]
 }
 ```
 
@@ -474,16 +458,16 @@ Success to delete user.
 
 #### Required
 
-*new_username*: `string`
+_new_username_: `string`
 
-*current_password*: `string`
+_current_password_: `string`
 
 #### Json body
 
 ```json
 {
-    "new_username": "mikeshinoda",
-    "current_password": "passwd123"
+  "new_username": "mikeshinoda",
+  "current_password": "passwd123"
 }
 ```
 
@@ -499,12 +483,8 @@ non_field_errors
 
 ```json
 {
-    "current_password": [
-        "This field is required."
-    ],
-    "new_username": [
-        "This field is required."
-    ]
+  "current_password": ["This field is required."],
+  "new_username": ["This field is required."]
 }
 ```
 
@@ -522,13 +502,13 @@ non_field_errors
 
 #### Required
 
-*email*: `string`
+_email_: `string`
 
 #### Json body
 
 ```json
 {
-    "email": "hello@world.com"
+  "email": "hello@world.com"
 }
 ```
 
@@ -544,9 +524,7 @@ Success to send reset username email.
 
 ```json
 {
-    "email": [
-        "Enter a valid email address."
-    ]
+  "email": ["Enter a valid email address."]
 }
 ```
 
@@ -570,22 +548,22 @@ So refer to this `username-reset/{uid}/{token}`, the `uid` is `OA`, and `token` 
 
 #### Required
 
-*uid*: `string`
+_uid_: `string`
 
-*token*: `string`
+_token_: `string`
 
-*new_username*: `string`
+_new_username_: `string`
 
-*re_new_username*: `string`
+_re_new_username_: `string`
 
 #### Json body
 
 ```json
 {
-    "uid": "OA",
-    "token": "cystj8-e5be9cfa6c63528e37adf22ebf9f2f9a",
-    "new_username": "mikeshinoda",
-    "re_new_username": "mikeshinoda"
+  "uid": "OA",
+  "token": "cystj8-e5be9cfa6c63528e37adf22ebf9f2f9a",
+  "new_username": "mikeshinoda",
+  "re_new_username": "mikeshinoda"
 }
 ```
 
@@ -601,21 +579,13 @@ Success to reset username.
 
 ```json
 {
-    "uid": [
-        "Invalid user id or user doesn't exist."
-    ],
-    "token": [
-        "Invalid token for given user."
-    ],
-    "new_username": [
-        "This field is required."
-    ],
-    // "new_username": [
-        // "A user with that username already exists."
-    // ],
-    "re_new_username": [
-        "This field is required."
-    ]
+  "uid": ["Invalid user id or user doesn't exist."],
+  "token": ["Invalid token for given user."],
+  "new_username": ["This field is required."],
+  // "new_username": [
+  // "A user with that username already exists."
+  // ],
+  "re_new_username": ["This field is required."]
 }
 ```
 
@@ -633,19 +603,19 @@ Success to reset username.
 
 #### Required
 
-*new_password*: `string`
+_new_password_: `string`
 
-*re_new_password*: `string`
+_re_new_password_: `string`
 
-*current_password*: `string`
+_current_password_: `string`
 
 #### Json body
 
 ```json
 {
-    "new_password": "newpasswd123",
-    "re_new_password": "newpasswd123",
-    "current_password": "passwd123"
+  "new_password": "newpasswd123",
+  "re_new_password": "newpasswd123",
+  "current_password": "passwd123"
 }
 ```
 
@@ -661,15 +631,9 @@ non_field_errors
 
 ```json
 {
-    "new_password": [
-        "This field is required."
-    ],
-    "re_new_password": [
-        "This field is required."
-    ],
-    "current_password": [
-        "This field is required."
-    ]
+  "new_password": ["This field is required."],
+  "re_new_password": ["This field is required."],
+  "current_password": ["This field is required."]
 }
 ```
 
@@ -689,13 +653,13 @@ Use this endpoint to send email to user with password reset link. You have to se
 
 #### Required
 
-*email*: `string`
+_email_: `string`
 
 #### Json body
 
 ```json
 {
-    "email": "hello@world.com"
+  "email": "hello@world.com"
 }
 ```
 
@@ -711,9 +675,7 @@ Success to send reset password email.
 
 ```json
 {
-    "email": [
-        "Enter a valid email address."
-    ]
+  "email": ["Enter a valid email address."]
 }
 ```
 
@@ -737,22 +699,22 @@ So refer to this `password-reset/{uid}/{token}`, the `uid` is `OA`, and `token` 
 
 #### Required
 
-*uid*: `string`
+_uid_: `string`
 
-*token*: `string`
+_token_: `string`
 
-*new_password*: `string`
+_new_password_: `string`
 
-*re_new_password*: `string`
+_re_new_password_: `string`
 
 #### Json body
 
 ```json
 {
-    "uid": "OA",
-    "token": "cyu52z-f838db4a34f5a9a5fd5008191381405c",
-    "new_password": "newpasswd123",
-    "re_new_password": "newpasswd123"
+  "uid": "OA",
+  "token": "cyu52z-f838db4a34f5a9a5fd5008191381405c",
+  "new_password": "newpasswd123",
+  "re_new_password": "newpasswd123"
 }
 ```
 
@@ -768,17 +730,9 @@ Success to reset password.
 
 ```json
 {
-    "uid": [
-        "Invalid user id or user doesn't exist."
-    ],
-    "token": [
-        "Invalid token for given user."
-    ],
-    "new_password": [
-        "This field is required."
-    ],
-    "re_new_password": [
-        "This field is required."
-    ]
+  "uid": ["Invalid user id or user doesn't exist."],
+  "token": ["Invalid token for given user."],
+  "new_password": ["This field is required."],
+  "re_new_password": ["This field is required."]
 }
 ```

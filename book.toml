@@ -4,8 +4,12 @@ language = "en"
 src = "src"
 title = "Inventory Distributed System Design"
 
-
 [preprocessor.toc]
 command = "mdbook-toc"
 renderer = ["html"]
 max-level = 2
+
+
+[output.html]
+git-repository-url = "https://github.com/shinoda4/distributed_system_design"
+git-repository-icon = "fa-github"

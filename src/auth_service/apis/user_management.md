@@ -18,49 +18,49 @@ index users.
 
 #### Optional
 
-*limit*: `number`
+_limit_: `number`
 
-*offset*: `number`
+_offset_: `number`
 
-*search*: `string`
+_search_: `string`
 
-*[field]__[lookup]*: `string`
+_[field]\_\_[lookup]_: `string`
 
 ### Fields
 
-*username*: `string`
+_username_: `string`
 
-*email*: `string`
+_email_: `string`
 
-*phone_number*: `string`
+_phone_number_: `string`
 
 ### Lookup
 
-*exact*: `string`
+_exact_: `string`
 
-*iexact*: `string`
+_iexact_: `string`
 
-*contains*: `string`
+_contains_: `string`
 
-*icontains*: `string`
+_icontains_: `string`
 
-*startswith*: `string`
+_startswith_: `string`
 
-*istartswith*: `string`
+_istartswith_: `string`
 
-*endswith*: `string`
+_endswith_: `string`
 
-*iendswith*: `string`
+_iendswith_: `string`
 
-*in*: `string`
+_in_: `string`
 
-*gt*: `number`
+_gt_: `number`
 
-*gte*: `number`
+_gte_: `number`
 
-*lt*: `number`
+_lt_: `number`
 
-*lte*: `number`
+_lte_: `number`
 
 ### Response
 
@@ -72,23 +72,23 @@ index users.
 
 ```json
 {
-    "count": 1,
-    "next": null,
-    "previous": null,
-    "results": [
-        {
-            "id": 8,
-            "roles": [],
-            "last_login": "2025-11-06T07:37:34.364302Z",
-            "username": "mike",
-            "first_name": "",
-            "last_name": "",
-            "is_active": true,
-            "date_joined": "2025-11-05T14:21:05.963153Z",
-            "phone_number": "1234567890",
-            "email": "hello@world.com"
-        }
-    ]
+  "count": 1,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 8,
+      "roles": [],
+      "last_login": "2025-11-06T07:37:34.364302Z",
+      "username": "mike",
+      "first_name": "",
+      "last_name": "",
+      "is_active": true,
+      "date_joined": "2025-11-05T14:21:05.963153Z",
+      "phone_number": "1234567890",
+      "email": "hello@world.com"
+    }
+  ]
 }
 ```
 
@@ -106,16 +106,16 @@ index users.
 
 #### Required
 
-*username*: `string`
+_username_: `string`
 
-*email*: `string`
+_email_: `string`
 
 #### Json body
 
 ```json
 {
-    "username": "jane_doe",
-    "email": "hello@world.com"
+  "username": "jane_doe",
+  "email": "hello@world.com"
 }
 ```
 
@@ -131,16 +131,16 @@ index users.
 
 ```json
 {
-    "id": 9,
-    "roles": [],
-    "last_login": null,
-    "username": "jane_doe",
-    "first_name": "",
-    "last_name": "",
-    "is_active": true,
-    "date_joined": "2025-11-06T08:00:00.000000Z",
-    "phone_number": null,
-    "email": "jane_doe@example.com"
+  "id": 9,
+  "roles": [],
+  "last_login": null,
+  "username": "jane_doe",
+  "first_name": "",
+  "last_name": "",
+  "is_active": true,
+  "date_joined": "2025-11-06T08:00:00.000000Z",
+  "phone_number": null,
+  "email": "jane_doe@example.com"
 }
 ```
 
@@ -152,12 +152,8 @@ index users.
 
 ```json
 {
-    "username": [
-        "A user with that username already exists."
-    ],
-    "email": [
-        "user with this email already exists."
-    ]
+  "username": ["A user with that username already exists."],
+  "email": ["user with this email already exists."]
 }
 ```
 
@@ -181,16 +177,16 @@ index users.
 
 ```json
 {
-    "id": 8,
-    "roles": [],
-    "last_login": "2025-11-06T07:37:34.364302Z",
-    "username": "mike",
-    "first_name": "",
-    "last_name": "",
-    "is_active": true,
-    "date_joined": "2025-11-05T14:21:05.963153Z",
-    "phone_number": "1234567890",
-    "email": "hello@world.com"
+  "id": 8,
+  "roles": [],
+  "last_login": "2025-11-06T07:37:34.364302Z",
+  "username": "mike",
+  "first_name": "",
+  "last_name": "",
+  "is_active": true,
+  "date_joined": "2025-11-05T14:21:05.963153Z",
+  "phone_number": "1234567890",
+  "email": "hello@world.com"
 }
 ```
 
@@ -202,7 +198,7 @@ index users.
 
 ```json
 {
-    "detail": "Not found."
+  "detail": "Not found."
 }
 ```
 
@@ -220,16 +216,16 @@ index users.
 
 #### Required
 
-*username*: `string`
+_username_: `string`
 
-*email*: `string`
+_email_: `string`
 
-####  Json body
+#### Json body
 
 ```json
 {
-    "username": "new",
-    "email": "new@new.com"
+  "username": "new",
+  "email": "new@new.com"
 }
 ```
 
@@ -243,16 +239,16 @@ index users.
 
 ```json
 {
-    "id": 9,
-    "roles": [],
-    "last_login": null,
-    "username": "new",
-    "first_name": "",
-    "last_name": "",
-    "is_active": true,
-    "date_joined": "2025-11-06T09:52:19.997422Z",
-    "phone_number": null,
-    "email": "new@new.com"
+  "id": 9,
+  "roles": [],
+  "last_login": null,
+  "username": "new",
+  "first_name": "",
+  "last_name": "",
+  "is_active": true,
+  "date_joined": "2025-11-06T09:52:19.997422Z",
+  "phone_number": null,
+  "email": "new@new.com"
 }
 ```
 
@@ -264,7 +260,7 @@ index users.
 
 ```json
 {
-    "detail": "Not found."
+  "detail": "Not found."
 }
 ```
 
@@ -276,12 +272,8 @@ index users.
 
 ```json
 {
-    "username": [
-        "This field is required."
-    ],
-    "email": [
-        "This field is required."
-    ]
+  "username": ["This field is required."],
+  "email": ["This field is required."]
 }
 ```
 
@@ -293,21 +285,21 @@ index users.
 
 #### Optional
 
-*username*: `string`
+_username_: `string`
 
-*email*: `string`
+_email_: `string`
 
-*phone_number*: `string`
+_phone_number_: `string`
 
-*first_name*: `string`
+_first_name_: `string`
 
-*last_name*: `string`
+_last_name_: `string`
 
 ### Request body
 
 ```json
 {
-    "first_name": "shinoda"
+  "first_name": "shinoda"
 }
 ```
 
@@ -321,16 +313,16 @@ index users.
 
 ```json
 {
-    "id": 9,
-    "roles": [],
-    "last_login": null,
-    "username": "new",
-    "first_name": "",
-    "last_name": "",
-    "is_active": true,
-    "date_joined": "2025-11-06T09:52:19.997422Z",
-    "phone_number": null,
-    "email": "new@new.com"
+  "id": 9,
+  "roles": [],
+  "last_login": null,
+  "username": "new",
+  "first_name": "",
+  "last_name": "",
+  "is_active": true,
+  "date_joined": "2025-11-06T09:52:19.997422Z",
+  "phone_number": null,
+  "email": "new@new.com"
 }
 ```
 
@@ -340,7 +332,7 @@ index users.
 
 ```json
 {
-    "detail": "Not found."
+  "detail": "Not found."
 }
 ```
 
@@ -372,6 +364,6 @@ index users.
 
 ```json
 {
-    "detail": "Not found."
+  "detail": "Not found."
 }
 ```
