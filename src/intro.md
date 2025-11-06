@@ -1,5 +1,4 @@
 
-
 # Distributed system design
 
 This is a book like documentation of a inventory system.
@@ -19,27 +18,3 @@ The frontend part is powered by [Svelte 5.41.0](https://svelte.dev/docs) and [Sv
 For more details, go to [here](./auth_service/intro.md).
 
 
-##  Product Service
-
-##  Inventory Service
-##  Order Service
-##  Shipment/Transaction Service
-##  Procurement Service
-##  Analytics/BI Service
-##  Notification Service
-
-<!-- ## Database Stratup
-
-### Auth Service
-
-#### Postgres
-
-```shell
-sudo docker run --name auth-service-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
-```
-
-#### Redis
-
-```shell
-sudo docker run --name auth-service-redis -p 6379:6379 -d redis
-``` -->

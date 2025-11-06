@@ -1,4 +1,4 @@
-# APIs
+# Authenticate APIs
 
 <!-- toc -->
 
@@ -716,43 +716,6 @@ Success to send reset password email.
     ]
 }
 ```
-
-<!-- Reset Password Confirmation¶
-Use this endpoint to finish reset password process. This endpoint is not a URL which will be directly exposed to your users - you should provide site in your frontend application (configured by PASSWORD_RESET_CONFIRM_URL) which will send POST request to reset password confirmation endpoint. HTTP_400_BAD_REQUEST will be raised if the user has logged in or changed password since the token creation.
-
-Default URL: /users/reset_password_confirm/
-
-Note
-
-re_new_password is only required if PASSWORD_RESET_CONFIRM_RETYPE is True
-
-Method
-
-Request
-
-Response
-
-POST
-
-uid
-
-token
-
-new_password
-
-re_new_password
-
-HTTP_204_NO_CONTENT
-
-HTTP_400_BAD_REQUEST
-
-uid
-
-token
-
-new_password
-
-re_new_password -->
 
 ## Reset Password Confirmation
 

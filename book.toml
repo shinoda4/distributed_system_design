@@ -8,3 +8,4 @@ title = "Inventory Distributed System Design"
 [preprocessor.toc]
 command = "mdbook-toc"
 renderer = ["html"]
+max-level = 2
